@@ -1,0 +1,154 @@
+body {
+  font-family: "Play", sans-serif;
+  background: #fffafa;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+nav.navbar {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav.navbar .nav-item {
+  color: #414141 !important;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+nav.navbar .custom-btn-nav {
+  background-color: #105fef;
+  color: white !important;
+  border-radius: 3px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+nav .navbar-brand h2 {
+  color: #414141;
+  font-weight: lighter;
+  font-size:40px;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.01);
+  margin: 0 !important;
+  padding: 0;
+}
+
+nav .navbar-brand h2:hover {
+  transform: scale(1.05);
+}
+
+#intro{
+  overflow: hidden;
+}
+
+#intro .introanim {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  width: 150%;
+  filter: opacity(0.3);
+  transition: filter 0.3s ease;
+}
+#intro .textholder {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+#intro h1.now {
+  font-family: "Play", sans-serif;
+  color: #414141;
+  font-size: 72px;
+  z-index: 100;
+  width: 130%;
+}
+#intro p.whoarewe {
+  font-size: 20px;
+}
+#intro p.whoarewe span{
+  animation: color-animation 2s linear infinite;
+}
+#intro h1.now span {
+  animation-duration: 0.5s;
+}
+#intro h1.now a {
+  color: #414141;
+  text-decoration: none;
+}
+#intro h1.now a i {
+  color: #414141;
+  font-size: 40px;
+  left: 5px;
+  position: relative;
+  bottom: -2px;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+#intro-contacts {
+  position: fixed;
+  z-index: 999;
+  left: 0px;
+  bottom: 30px;
+  width: 100%;
+}
+#intro-contacts a {
+  text-decoration: none;
+}
+#intro-contacts i {
+  color: #414141;
+  font-size: 30px;
+  padding: 0rem 1.3rem;
+  transition: all 0.3s ease;
+}
+
+#intro-contacts i:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 992px) {
+  #intro .introanim {
+    width: 180%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  #intro .introanim {
+    width: 220%;
+  }
+
+}
+
+
+@media screen and (max-width: 575px) {
+  #intro h1.now{
+    font-size: 55px;
+  }
+  #intro p.whoarewe{
+    width: 140%;
+  }
+  nav .navbar-brand h2 {
+    font-size:30px;
+  }
+  
+}
+
+
+
+@keyframes color-animation {
+  0%    {color: #414141}
+  49%   {color: #414141}
+  50%   {color: #105fef}
+  99%   {color: #105fef}
+  100%  {color: #414141}
+}
